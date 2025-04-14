@@ -25,18 +25,166 @@ Sempre tera um # para que o pacote seja inicializado uma unica vez.
 # install.packages("readxl") # pacote para leitura de arquivos no formato (xlsx).
 
 ```
+## CARREGANDO PACOTES.
+
+```{r}
+library(readxl)
+
+```
+
+
 
 ## CARREGAMENTO DE ARQUIVO NO FORMATO XLSX.
 
 Iremos carregar esse aquivo no formato `xlsx`, para transformar em um data frame que é o modelo otimo para manipular os dados.
 
 ```{r}
-plot(cars)
+# Caminho do arquivo (ajuste conforme necessário)
+arquivo <- "base_agro.xlsx"
+
+# Carregar os dados da planilha e converter para data frame
+dados <- as.data.frame(read_excel(arquivo))
+
+# Convertendo os dado de Produção por hectare em toneladas de todos os produtores 
+dados$`Produção por hectare (toneladas)` <- as.numeric(dados$`Produção por hectare (toneladas)`)
+
+
+# Visualizar as primeiras linhas
+head(dados)
+
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+Quando o programa copilou esse arquivo analisamos de `Tipo de Cultivo` -  são dados do tipo qualitativas nominal, `Quantidade de Produtores` - são dados de quantidativos discretos, `Produção por hectare` -  esta no formato qualitativo, mas vou fazer um tratamento nos dados para tranformar em quantitativo, e por ultimo, `Calssifição da Produtividade` - se refere a dados qualitativos ordinais e foram convertidos em quantitativos do continuos.
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+## SOBRE AS ANALISE ESTATISTICAS QUE SERAM REALIZADAS.
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+Iremos fazer análise quantitativa da coluna `Quantidade de Produtores` e `Producão por hectare`
+
+### QUANTIDADE DE PRODUTORES - VARIAVEIS QUANTITATIVA DISCRETA
+
+#### As Medidas de Tendência Central;
+
+##### MEDIA
+
+```{r}
+# Média
+media <- mean(dados$`Quantidade de Produtores`, na.rm = TRUE)
+media
+
+```
+
+##### MODA
+
+```{r}
+
+# Moda (não tem função nativa, vamos criar)
+moda <- function(x) {
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+moda(dados$`PQuantidade de Produtores`)
+
+
+```
+
+##### MEDIANA
+
+```{r}
+
+
+# Mediana
+mediana <- median(dados$`Quantidade de Produtores`, na.rm = TRUE)
+mediana
+
+
+```
+
+```{r}
+# 
+arquivo <- "base_agro.xlsx"
+
+# Carregar os dados da planilha e converter para data frame
+dados <- as.data.frame(read_excel(arquivo))
+
+# Convertendo os dado de Produção por hectare em toneladas de todos os produtores 
+dados$`Produção por hectare (toneladas)` <- as.numeric(dados$`Produção por hectare (toneladas)`)
+
+
+# Visualizar as primeiras linhas
+head(dados)
+
+```
+
+#### As Medidas de Dispersão;
+
+##### VARIÂNCIA
+```{r}
+# Variância
+var(dados$`Quantidade de Produtores`, na.rm = TRUE)
+
+```
+
+##### DESVIO PADÃO
+```{r}
+
+# Desvio padrão
+sd(dados$`Produção por hectare (toneladas)`, na.rm = TRUE)
+
+```
+
+##### AMPLITUDE
+
+```{r}
+
+
+# Amplitude
+range_valores <- range(dados$`Produção por hectare (toneladas)`, na.rm = TRUE)
+amplitude <- diff(range_valores)
+amplitude
+
+
+```
+
+
+#### As Medidas Separatrizes;
+
+
+
+
+#### Uma análise gráfica.
+
+```{r}
+# Caminho do arquivo (ajuste conforme necessário)
+arquivo <- "base_agro.xlsx"
+
+# Carregar os dados da planilha e converter para data frame
+dados <- as.data.frame(read_excel(arquivo))
+
+# Convertendo os dado de Produção por hectare em toneladas de todos os produtores 
+dados$`Produção por hectare (toneladas)` <- as.numeric(dados$`Produção por hectare (toneladas)`)
+
+
+# Visualizar as primeiras linhas
+head(dados)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

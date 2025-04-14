@@ -1,0 +1,6 @@
+"0","# Variância"
+"0","var(dados$`Quantidade de Produtores`, na.rm = TRUE)"
+"1","[1]"
+"1"," 771.1678"
+"1","
+"

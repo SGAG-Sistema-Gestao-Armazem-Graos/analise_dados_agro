@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/sgag-placa-detector/analise_dados_agro/README.Rmd",
     "project_path": "README.Rmd",
     "type": "r_markdown",
-    "hash": "1326688867",
+    "hash": "1136183793",
     "contents": "",
     "dirty": false,
     "created": 1744635775429.0,
@@ -14,15 +14,15 @@
         "chunk_output_type": "inline",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "22,1",
-        "scrollLine": "17"
+        "cursorPosition": "122,51",
+        "scrollLine": "112"
     },
     "folds": "",
-    "lastKnownWriteTime": 1744636970,
+    "lastKnownWriteTime": 1744643000,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1744636970192,
+    "last_content_update": 1744643000287,
     "read_only": false,
     "read_only_alternatives": []
 }

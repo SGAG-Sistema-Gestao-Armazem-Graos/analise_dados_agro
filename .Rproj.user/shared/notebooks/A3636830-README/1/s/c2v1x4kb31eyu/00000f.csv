@@ -1,0 +1,7 @@
+"0","# Média"
+"0","media <- mean(dados$`Quantidade de Produtores`, na.rm = TRUE)"
+"0","media"
+"1","[1]"
+"1"," 59.26667"
+"1","
+"

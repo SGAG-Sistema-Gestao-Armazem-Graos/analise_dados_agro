@@ -1,0 +1,9 @@
+"0",""
+"0","# Moda (não tem função nativa, vamos criar)"
+"0","moda <- function(x) {"
+"0","  ux <- unique(x)"
+"0","  ux[which.max(tabulate(match(x, ux)))]"
+"0","}"
+"0","moda(dados$`PQuantidade de Produtores`)"
+"1","NULL
+"
