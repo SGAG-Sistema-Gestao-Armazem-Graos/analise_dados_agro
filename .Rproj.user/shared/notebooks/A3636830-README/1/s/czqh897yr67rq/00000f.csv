@@ -1,0 +1,5 @@
+"0","# Histograma"
+"0","hist(dados$`Produção por hectare (toneladas)`,"
+"0","     main = ""Distribuição da Produção por hectare (toneladas)"","
+"0","     xlab = ""tonelada por hectares"","
+"0","     col = ""skyblue"", border = ""white"")"

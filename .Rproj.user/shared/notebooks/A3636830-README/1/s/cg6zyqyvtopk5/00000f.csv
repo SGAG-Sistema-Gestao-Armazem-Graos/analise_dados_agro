@@ -1,0 +1,7 @@
+"0",""
+"0","# Boxplot"
+"0","boxplot(dados$`Produção por hectare (toneladas)`,"
+"0","        main = ""Boxplot da Produção por hectare (toneladas)"","
+"0","        ylab = ""Tonelada por hectare"","
+"0","        col = ""lightgreen"", horizontal = TRUE)"
+"0",""

@@ -1,0 +1,5 @@
+"0","# Histograma"
+"0","hist(dados$`Quantidade de Produtores`,"
+"0","     main = ""Distribuição da Quantidade de Produtores"","
+"0","     xlab = ""QUANTIDADE DE PRODUTORES"","
+"0","     col = ""skyblue"", border = ""white"")"

@@ -1,0 +1,7 @@
+"0","# Média"
+"0","media <- mean(dados$`Produção por hectare (toneladas)`, na.rm = TRUE)"
+"0","media"
+"1","[1]"
+"1"," 5.149667"
+"1","
+"

@@ -1,0 +1,7 @@
+"0",""
+"0","# Boxplot"
+"0","boxplot(dados$`Quantidade de Produtores`,"
+"0","        main = ""Boxplot da Quantidade de Produtores"","
+"0","        ylab = ""Quantidade"","
+"0","        col = ""lightgreen"", horizontal = TRUE)"
+"0",""
