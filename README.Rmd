@@ -99,21 +99,6 @@ mediana
 
 ```
 
-```{r}
-# 
-arquivo <- "base_agro.xlsx"
-
-# Carregar os dados da planilha e converter para data frame
-dados <- as.data.frame(read_excel(arquivo))
-
-# Convertendo os dado de Produção por hectare em toneladas de todos os produtores 
-dados$`Produção por hectare (toneladas)` <- as.numeric(dados$`Produção por hectare (toneladas)`)
-
-
-# Visualizar as primeiras linhas
-head(dados)
-
-```
 
 #### As Medidas de Dispersão;
 
@@ -128,7 +113,7 @@ var(dados$`Quantidade de Produtores`, na.rm = TRUE)
 ```{r}
 
 # Desvio padrão
-sd(dados$`Produção por hectare (toneladas)`, na.rm = TRUE)
+sd(dados$`Quantidade de Produtores`, na.rm = TRUE)
 
 ```
 
@@ -138,7 +123,7 @@ sd(dados$`Produção por hectare (toneladas)`, na.rm = TRUE)
 
 
 # Amplitude
-range_valores <- range(dados$`Produção por hectare (toneladas)`, na.rm = TRUE)
+range_valores <- range(dados$`Quantidade de Produtores`, na.rm = TRUE)
 amplitude <- diff(range_valores)
 amplitude
 
@@ -147,9 +132,35 @@ amplitude
 
 
 #### As Medidas Separatrizes;
+##### QUARTIS
 
+```{r}
 
+# Quartis
+quartis <- quantile(dados$`Produção por hectare (toneladas)`, probs = c(0.25, 0.5, 0.75), na.rm = TRUE)
+quartis
 
+```
+
+##### DECIS
+
+```{r}
+
+# Decis
+decis<- quantile(dados$`Produção por hectare (toneladas)`, probs = seq(0.1, 0.9, by = 0.1), na.rm = TRUE)
+decis
+
+```
+
+##### PERCENTIS
+
+```{r}
+
+# Percentis
+percentis <- quantile(dados$`Produção por hectare (toneladas)`, probs = seq(0.01, 0.99, by = 0.01), na.rm = TRUE)
+percentis
+
+```
 
 #### Uma análise gráfica.
 

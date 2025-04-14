@@ -1,0 +1,7 @@
+"0",""
+"0","# Desvio padrão"
+"0","sd(dados$`Quantidade de Produtores`, na.rm = TRUE)"
+"1","[1]"
+"1"," 27.76991"
+"1","
+"
