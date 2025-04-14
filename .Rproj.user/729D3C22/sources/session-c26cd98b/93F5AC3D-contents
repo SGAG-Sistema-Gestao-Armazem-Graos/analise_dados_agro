@@ -4,9 +4,31 @@ title: "ANÁLISE ESTATÍSTICA DE DADOS DO AGRO"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+## Introdução aos Dados da Planilha `"base_agro.xlsx"`
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+A planilha `base_agro.xlsx` reúne informações essenciais sobre diferentes tipos de cultivos agrícolas. Ela foi elaborada com o objetivo de analisar a produtividade agrícola em determinada região, considerando os seguintes aspectos:
+
+*- Tipo de Cultivo:* identifica as culturas analisadas, como milho e cana-de-açúcar.
+
+*- Quantidade de Produtores:* representa o número de agricultores que atuam em cada tipo de cultivo.
+
+*- Produção por hectare (toneladas):* indica a média de produção para cada hectare cultivado, sendo um importante indicador de eficiência agrícola.
+
+*-Classificação da Produtividade:* classifica a produtividade como Alta, Média ou Baixa, de acordo com critérios previamente estabelecidos.
+
+Esses dados são úteis para diagnósticos sobre eficiência produtiva, planejamento de políticas públicas, orientação de investimentos e capacitação técnica para o setor agropecuário.
+
+## INSTALAÇÃO DE PACOTE.
+
+Sempre tera um # para que o pacote seja inicializado uma unica vez.
+```{r}
+# install.packages("readxl") # pacote para leitura de arquivos no formato (xlsx).
+
+```
+
+## CARREGAMENTO DE ARQUIVO NO FORMATO XLSX.
+
+Iremos carregar esse aquivo no formato `xlsx`, para transformar em um data frame que é o modelo otimo para manipular os dados.
 
 ```{r}
 plot(cars)
